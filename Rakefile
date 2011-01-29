@@ -7,6 +7,7 @@ begin
     gem.name = "elo"
     gem.summary = %Q{The Elo rating system is a method for calculating the relative skill levels of players in two-player games such as cess and Go.}
     gem.description = %Q{The Elo rating system is a method for calculating the relative skill levels of players in two-player games such as cess and Go.}
+    gem.version = "0.1.0"
     gem.email = "iain@iain.nl"
     gem.homepage = "http://github.com/iain/elo"
     gem.authors = ["Iain Hecker"]
