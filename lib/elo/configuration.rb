@@ -31,12 +31,16 @@ module Elo
     # K-factor rules can be added by using the +k_factor+-method.
     attr_accessor :use_FIDE_settings
 
+    FIDE_SETTINGS = {
+      :pro_rating_boundry => 2400,
+      :starter_boundry => 30,
+      :default_rating => 1000,
+      :default_k_factor => 15,
+      :use_FIDE_settings => true
+    }
+
     def initialize #:nodoc:
-      @pro_rating_boundry = 2400
-      @starter_boundry    = 30
-      @default_rating     = 1000
-      @default_k_factor   = 15
-      @use_FIDE_settings  = true
+      FIDE_SETTINGS.each {|attr, value| instance_variable_set("@#{attr}", value) }
     end
 
     # Add a K-factor rule. The first argument is the k-factor value.
